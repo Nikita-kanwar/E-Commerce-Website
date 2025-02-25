@@ -33,14 +33,27 @@ const Collection = () => {
         setSubCategory(prev => [...prev,e.target.value])
     }
   }
-  
-  useEffect(()=>{
-        setFilterProducts(products);
-  },[])
-  useEffect(()=>{
-console.log(subCategory);
 
-  },[subCategory])
+ 
+  const applyFilter = () => {
+    let productsCopy = products.slice();
+    if(category.length > 0){
+           productsCopy = productsCopy.filter(item => category.includes(item.category));
+    }
+
+    if(subCategory.length>0){
+        productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory))
+    }
+
+     setFilterProducts(productsCopy)
+
+  }
+    
+
+       useEffect(()=>{
+           applyFilter()
+         },[category,subCategory])
+  
 
   return (
     <div className='flex flex-col sm:flex-row  gap-1 sm:gap-10 pt-10 border-t' >
@@ -57,7 +70,7 @@ console.log(subCategory);
                   <input className='w-3' type="checkbox"  value={'Men'} onChange={toggleCategory}  /> Men
               </p>
               <p className='flex gap-2'>
-                  <input className='w-3' type="checkbox"  value={'women'}  onChange={toggleCategory} /> Women
+                  <input className='w-3' type="checkbox"  value={'Women'}  onChange={toggleCategory} /> Women
               </p>
               <p className='flex gap-2'>
                   <input className='w-3' type="checkbox"  value={'Kids'}  onChange={toggleCategory} /> Kids
@@ -72,7 +85,7 @@ console.log(subCategory);
                   <input className='w-3' type="checkbox"  value={'Topwear'} onChange={toggleSubCategory}  /> Topwear
               </p>
               <p className='flex gap-2'>
-                  <input className='w-3' type="checkbox"  value={'Bootomwear'} onChange={toggleSubCategory}  /> Bottomwear
+                  <input className='w-3' type="checkbox"  value={'Bottomwear'} onChange={toggleSubCategory}  /> Bottomwear
               </p>
               <p className='flex gap-2'>
                   <input className='w-3' type="checkbox"  value={'Winterwear'} onChange={toggleSubCategory}  /> Winterwear
