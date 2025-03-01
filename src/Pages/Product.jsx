@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../Context/ShopContext';
 import { assets, products } from '../assets/assets';
+import RelatedProducts from '../Components/RelatedProducts';
 
 const Product = () => {
 
@@ -53,7 +54,7 @@ const Product = () => {
                             <img src={assets.star_icon} alt="" className="w-3 5" />
                             <img src={assets.star_icon} alt="" className="w-3 5" />
                             <img src={assets.star_dull_icon} alt="" className="w-3 5" />
-                            <p className='pl-2' >{122}</p>
+                            <p className='pl-2' >(122)</p>
                       </div>
                       <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
                       <p className='mt-5 text-gray-500'>{productData.description}</p>
@@ -86,6 +87,9 @@ const Product = () => {
                      </div>
                </div>
              
+{/* Releted Products */}
+
+<RelatedProducts category={productData.category} subCategory={productData.subCategory} />
 
        </div>
   ): <div className='opacity-0'>
