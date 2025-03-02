@@ -38,16 +38,32 @@ const ShopContextProvider = (props)=>{
 
             setCartItems(cartData);
     }
+
     
-    useEffect(()=>{
-      console.log(cartItems);
-      
-    },[cartItems])
+    const getCartCount = ()=>{
+      let totalCount = 0;
+      for(const items in cartItems){
+        for( const item in cartItems[items]){
+              try{
+                  if(cartItems[items][item] > 0 ){
+                    totalCount += cartItems[items][item];
+                  }
+              } catch(error){
+
+              }
+        }
+      }
+      return totalCount;
+    }
+
+    
+   
 
     const value = {
         products,currency,delivery_fee,
         search,setSearch,showSearch,setShowSearch,
-        cartItems,addToCart
+        cartItems,addToCart,
+        getCartCount
               
     }
     return (
