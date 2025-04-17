@@ -14,8 +14,8 @@ const Contact = () => {
                     <div className='flex flex-col justify-center items-start gap-6'>
                       <p className='font-semibold text-xl text-gray-600'>Our Store</p>
                       <p className='text-gray-500'>078- Sector24,Jaipur <br /> Rajasthan, India</p>
-                      <p className='text-gray-500'>Tel: +91 87865358t7703 <br /> Email:nkestore@gmail.com</p>
-                      <p className='font-semibold text-xl text-gray-600'> Careers ate Store</p>
+                      <p className='text-gray-500'>Tel: +91 -9456-353-53 <br /> Email: fashionx@gmail.com</p>
+                      <p className='font-semibold text-xl text-gray-600'> Careers at Store</p>
                       <p className='text-gray-500'>Learn more about us </p>
 
                       <button className='border border-black px-8 text-sm hover:bg-black hover:text-white transition-all duration-500 cursor-pointer'>Explore Jobs</button>

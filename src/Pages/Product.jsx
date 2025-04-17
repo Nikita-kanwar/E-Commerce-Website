@@ -82,8 +82,8 @@ const Product = () => {
                              <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
                      </div>
                      <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, adipisci!</p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto, commodi quam nemo maiores voluptate?</p>
+                          
+                          <p>Crafted for style and comfort, this piece brings effortless chic to your wardrobe. Designed with premium materials and a perfect fit, it’s your go-to for any occasion.</p>
                      </div>
                </div>
              

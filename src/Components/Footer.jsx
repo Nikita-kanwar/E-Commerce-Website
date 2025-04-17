@@ -8,7 +8,8 @@ const Footer = () => {
              <div>
                  <img src={assets.logo} className='mb-5 w-32' alt="" />
                  <p className='w-full md:w-2/3 text-gray-600'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem similique et odit, accusantium illo ratione! Quia, molestiae odit! Sapiente.
+                 We’re a modern clothing brand built for bold self-expression and effortless style.
+                 From everyday essentials to standout pieces, we design fashion that feels as good as it looks.
                  </p>
              </div>
 
@@ -26,7 +27,7 @@ const Footer = () => {
                 <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
                 <ul className='flex flex-col gap-1 text-gray-600'>
                   <li>+91 -9456-353-53</li>
-                  <li>nikita@gmail.com</li>
+                  <li>fashionx@gmail.com</li>
                 </ul>
               </div>
                    
@@ -34,7 +35,7 @@ const Footer = () => {
 
         <div>
 <hr />
-<p className='py-5 text-sm text-center'>Copyright 2025 niki.com All rights reserved</p>
+<p className='py-5 text-sm text-center'>&copy; Copyright 2025 | All Rights Reserved | FashionX </p>
         </div>
     </div>
   )
